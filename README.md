@@ -32,7 +32,7 @@ Here are the steps to compile and load the binary onto the CPLD.
 - [Use Impact CLI to produce an SVF file from the JED file](#Use-Impact-CLI-to-produce-an-SVF-file-from-the-JED-file)
 
   ### Download and install Xilinx ISE 14.7
-  ### Download and install the FTDI D2XX drivers
+  ### Download-and-install-the-FTDI-D2XX-drivers
   ### Download/clone the SAMx4 project
   ### Open the project with Xilinx ISE 14.7
   ### Implement the top module to produce a JED file
