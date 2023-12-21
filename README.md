@@ -25,7 +25,7 @@ Xilinx ISE has a module called Impact which is used to  program the CPLD using a
 
 Here are the steps to compile and load the binary onto the CPLD.
 - [Download and install Xilinx ISE 14.7](#Download-and-install-Xilinx-ISE-147)
-- [Download and install the FTDI D2XX drivers](Download-and-install-the-FTDI-D2XX-drivers)
+- [Download and install the FTDI D2XX drivers](#Download-and-install-the-FTDI-D2XX-drivers)
 - [Download/clone the SAMx4 project.](#Downloadclone-the-SAMx4-project)
 - [Open the project with Xilinx ISE 14.7](#Open-the-project-with-Xilinx-ISE-147)
 - [Implement the top module(compile) to produce a JED file](#Implement-the-top-module-to-produce-a-JED-file)
