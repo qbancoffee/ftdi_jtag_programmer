@@ -27,12 +27,12 @@ Here are the steps to compile and load the binary onto the CPLD.
 - [Download and install Xilinx ISE 14.7](#Download-and-install-Xilinx-ISE-147)
 - [Download/clone the SAMx4 project.](#Downloadclone-the-SAMx4-project)
 - [Open the project with Xilinx ISE 14.7](#Open-the-project-with-Xilinx-ISE-147)
-- [Implement the top module(compile) to produce a JED file](#Implement-the-top-modulecompile-to-produce-a-JED-file)
+- [Implement the top module(compile) to produce a JED file](#Implement-the-top-module-to-produce-a-JED-file)
 - [Use Impact CLI to produce an SVF file from the JED file](#Use-Impact-CLI-to-produce-an-SVF-file-from-the-JED-file)
 
   ### Download and install Xilinx ISE 14.7
   ### Download/clone the SAMx4 project
   ### Open the project with Xilinx ISE 14.7
-  ### Implement the top module(compile) to produce a JED file
+  ### Implement the top module to produce a JED file
   ### Use Impact CLI to produce an SVF file from the JED file
 
