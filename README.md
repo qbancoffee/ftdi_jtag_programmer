@@ -21,7 +21,10 @@ When I learned that Ciaran Ascomb had recreated the SAM chip, a chip used in the
 I immediately cloned his repository and began modifying his design for my use.
 
 Ciarans project is called the SAMx4 and it's built around a Xilinx XC95144XL CPLD. The code was written in VHDL using the older Xilinx ISE 14.7 development environment.
-Xilinx ISE has a module called Impact which is used to  program the CPLD using a Xilinx supported debugger(programmer). I don't own a Xilinx programmer so I decided to find another approach.
+Xilinx ISE has a module called Impact which is used to  program the CPLD using a Xilinx supported debugger(programmer). I don't own a Xilinx programmer so I decided to search for another approach.
+The idea is to take an inexpensive FTDI based USB to Serial converter and use it as a JTAG programmer by bit banging the I/O pins.
+There are many FTDI bases USB to serial converters but for this one you'll have to use one based on the FT232RL chip. I had a [Black FTDI Friend](https://learn.adafruit.com/ftdi-friend/overview) by Adafruit lying around so I used that.
+
 
 Here are the steps to compile and load the binary onto the CPLD.
 - [Download and install Xilinx ISE 14.7](#Download-and-install-Xilinx-ISE-147)
@@ -33,6 +36,9 @@ Here are the steps to compile and load the binary onto the CPLD.
 
   ### Download and install Xilinx ISE 14.7
   ### Download and install the FTDI D2XX drivers
+  If you are using Windows you'll need to remove the the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
+  [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
+  
   ### Download/clone the SAMx4 project
   ### Open the project with Xilinx ISE 14.7
   ### Implement the top module to produce a JED file
