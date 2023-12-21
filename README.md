@@ -36,6 +36,7 @@ Here are the steps to compile and load the binary onto the CPLD.
 
   ### Download and install Xilinx ISE 14.7
   ### Download and install the FTDI D2XX drivers
+  
   If you are using Windows you'll need to remove the the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
   [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
   
