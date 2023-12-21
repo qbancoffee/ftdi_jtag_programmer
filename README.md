@@ -24,15 +24,15 @@ Ciarans project is called the SAMx4 and it's built around a Xilinx XC95144XL CPL
 Xilinx ISE has a module called Impact which is used to  program the CPLD using a Xilinx supported debugger(programmer). I don't own a Xilinx programmer so I decided to find another approach.
 
 Here are the steps to compile and load the binary onto the CPLD.
-- [Download and install Xilinx ISE 14.7](Download_and_install_Xilinx_ISE_14.7)
-- Download/clone the SAMx4 project.
-- Open the project with Xilinx ISE 14.7
-- Implement the top module(compile) to produce a [JED](https://fileinfo.com/extension/jed) file
-- Use Impact CLI to produce an [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file from the [JED](https://fileinfo.com/extension/jed) file
+- [Download and install Xilinx ISE 14.7](#Download-and-install-Xilinx-ISE-14.7)
+- [Download/clone the SAMx4 project.](#Download/clone-the-SAMx4-project)
+- [Open the project with Xilinx ISE 14.7](#Open-the-project-with-Xilinx-ISE-14.7)
+- [Implement the top module(compile) to produce a [JED](https://fileinfo.com/extension/jed) file](#Implement-the-top-module(compile)-to-produce-a-JED-file)
+- [Use Impact CLI to produce an [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file from the [JED](https://fileinfo.com/extension/jed) file](#Use-Impact-CLI-to-produce-an-SVF-file-from-the-JED-file)
 
   ### Download and install Xilinx ISE 14.7
   ### Download/clone the SAMx4 project
   ### Open the project with Xilinx ISE 14.7
   ### Implement the top module(compile) to produce a JED file
-  ### Use Impact CLI to produce an SVF file from the JEd file
+  ### Use Impact CLI to produce an SVF file from the JED file
 
