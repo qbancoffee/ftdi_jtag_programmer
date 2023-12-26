@@ -61,6 +61,10 @@ sudo ln –s libftd2xx.so.1.4.27 libftd2xx.so
 sudo chmod 0755 libftd2xx.so.1.4.27   
 ```
 
+Plug in the FT232 based USB to serial converter. At this point, linux will load the built in VCP module and create a file named
+something like /dev/ttyUSB0 which means that the OS recognized it and loaded the FTDI virtual comport module so we need to temporarily remove this module to free it up.
+
+
 ## Sources
 - [How to install Xilinx ISE on Linux, in 7 easy steps!](https://youtu.be/yzEIQLQZYpk?si=v6nmZXc6_NBRsofR)
 - [Xilinx XC9536XL CPLD | FT232RL FTDI JTAG programmer | Xilinx ISE 14.7](https://youtu.be/UACzPj62klc?si=p1kzB3-zuSgdYw8j)
