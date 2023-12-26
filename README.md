@@ -16,17 +16,30 @@ The idea is to take an inexpensive FTDI based USB to Serial converter and use it
 There are many FTDI bases USB to serial converters but for this one you'll have to use one based on the FT232RL chip. I had a [Black FTDI Friend](https://learn.adafruit.com/ftdi-friend/overview) by Adafruit lying around so I used that.
 
 
-Here are the steps to compile and load the binary onto the CPLD.
-- [Download and install Xilinx ISE 14.7](#Download-and-install-Xilinx-ISE-147)
-- [Download and install the FTDI D2XX drivers](#Download-and-install-the-FTDI-D2XX-drivers)
+Here are the steps to compile open and compile the project.
+
 - [Download/clone the SAMx4 project.](#Downloadclone-the-SAMx4-project)
+- [Download and install Xilinx ISE 14.7](#Download-and-install-Xilinx-ISE-147)
 - [Open the project with Xilinx ISE 14.7](#Open-the-project-with-Xilinx-ISE-147)
 - [Implement the top module(compile) to produce a JED file](#Implement-the-top-module-to-produce-a-JED-file)
 - [Use Impact CLI to produce an SVF file from the JED file](#Use-Impact-CLI-to-produce-an-SVF-file-from-the-JED-file)
 
+
+Here are the steps to load it onto the CPLD.
+- [Download and install the FTDI D2XX drivers](#Download-and-install-the-FTDI-D2XX-drivers)
+
+
+## Here are the steps to compile open and compile the project.
+
+  ### Download/clone the SAMx4 project
+  Get the project source files from [here.](https://www.6809.org.uk/dragon/samx4/)
   ### Download and install Xilinx ISE 14.7
   [Download Xilinx ISE 14.7 for your operating system](https://www.xilinx.com/downloadNav/vivado-design-tools/archive-ise.html)
+  ### Open the project with Xilinx ISE 14.7
+  ### Implement the top module to produce a JED file
+  ### Use Impact CLI to produce an SVF file from the JED file
   
+  ## Here are the steps to load it onto the CPLD.
   ### Download and install the FTDI D2XX drivers
   
   If you are using Windows you'll need to remove the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
@@ -47,16 +60,6 @@ cd /usr/local/lib
 sudo ln –s libftd2xx.so.1.4.27 libftd2xx.so
 sudo chmod 0755 libftd2xx.so.1.4.27   
 ```
-
-  
-  ### Download/clone the SAMx4 project
-  Get the project source files from [here.](https://www.6809.org.uk/dragon/samx4/)
-  ### Open the project with Xilinx ISE 14.7
-  ### Implement the top module to produce a JED file
-  ### Use Impact CLI to produce an SVF file from the JED file
-
-
-
 
 ## Sources
 - [How to install Xilinx ISE on Linux, in 7 easy steps!](https://youtu.be/yzEIQLQZYpk?si=v6nmZXc6_NBRsofR)
