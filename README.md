@@ -26,10 +26,18 @@ Here are the steps to compile and load the binary onto the CPLD.
 
   ### Download and install Xilinx ISE 14.7
   [Download Xilinx ISE 14.7 for your operating system](https://www.xilinx.com/downloadNav/vivado-design-tools/archive-ise.html)
+  
   ### Download and install the FTDI D2XX drivers
   
-  If you are using Windows you'll need to remove the the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
+  If you are using Windows you'll need to remove the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
+  If you are using Linux then you'll need to temporarily unload the VCP(Virtual COM Port) module and install the D2XX direct USB access static and shared libraries.
+  
   [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
+
+  Since I use Linux I'll go over what I did for my installation.
+  I used [this](https://ftdichip.com/Support/Documents/AppNotes/AN_220_FTDI_Drivers_Installation_Guide_for_Linux.pdf) guide to install the libraries and header but I'll just paste the necessary commands below.
+   
+
   
   ### Download/clone the SAMx4 project
   Get the project source files from [here.](https://www.6809.org.uk/dragon/samx4/)
