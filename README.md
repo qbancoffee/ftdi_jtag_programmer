@@ -35,8 +35,8 @@ Here are the steps to compile and load the binary onto the CPLD.
   [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
 
   Since I use Linux I'll go over what I did for my installation.
-  I used [this](https://ftdichip.com/Support/Documents/AppNotes/AN_220_FTDI_Drivers_Installation_Guide_for_Linux.pdf) guide to install the libraries and header but I'll just paste the necessary commands below.
-At the time of this writing the D2XX libraries was version 1.4.27 so you'll have adjust accordingly if using a different version.
+  I used [this](https://ftdichip.com/Support/Documents/AppNotes/AN_220_FTDI_Drivers_Installation_Guide_for_Linux.pdf) guide to install the libraries and headers but I'll just paste the necessary commands below.
+At the time of this writing the D2XX library was version 1.4.27 so you'll have adjust accordingly if using a different version.
 Once downloaded, extract the files and navigate to the direcory where the files were extracted and enter the following commands using a terminal.
 ```bash
 sudo cp release/build/lib* /usr/local/lib
@@ -44,8 +44,8 @@ sudo cp release/build/lib* /usr/local/lib
 Make the following symbolic links and permission modifications in /usr/local/lib:
 ```bash
 cd /usr/local/lib
-sudo ln –s libftd2xx.so.1.1.12 libftd2xx.so
-sudo chmod 0755 libftd2xx.so.1.1.12   
+sudo ln –s libftd2xx.so.1.4.27 libftd2xx.so
+sudo chmod 0755 libftd2xx.so.1.4.27   
 ```
 
   
