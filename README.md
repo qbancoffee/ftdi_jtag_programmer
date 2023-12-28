@@ -39,8 +39,13 @@ Here are the steps to load it onto the CPLD.
   ### Download/clone the SAMx4 project
   Get the project source files from [here.](https://www.6809.org.uk/dragon/samx4/)
   ### Download and install Xilinx ISE 14.7
+  In order to download Xilinx ISE 14.7 you'll have to create and account. Once you've created and account,
+  make sure to download the "Full Product Installation" which is a single DVD file.
+  
   [Download Xilinx ISE 14.7 for your operating system](https://www.xilinx.com/downloadNav/vivado-design-tools/archive-ise.html)
+  
   If you are using Linux watch this video.
+  
   [How to install Xilinx ISE on Linux, in 7 easy steps!](https://youtu.be/yzEIQLQZYpk?si=v6nmZXc6_NBRsofR)
   ### Open the project with Xilinx ISE 14.7
   ### Implement the top module to produce a JED file
