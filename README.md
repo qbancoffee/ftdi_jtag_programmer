@@ -16,7 +16,7 @@ The idea is to take an inexpensive FTDI based USB to Serial converter and use it
 There are many FTDI bases USB to serial converters but for this one you'll have to use one based on the FT232RL chip. I had a [Black FTDI Friend](https://learn.adafruit.com/ftdi-friend/overview) by Adafruit lying around so I used that.
 
 
-Here are the steps to compile open and compile the project.
+Here are the steps to compile the project and program the CPLD.
 
 - [Download/clone the SAMx4 project.](#Downloadclone-the-SAMx4-project)
 - [Download and install Xilinx ISE 14.7](#Download-and-install-Xilinx-ISE-147)
@@ -31,7 +31,7 @@ Here are the steps to load it onto the CPLD.
 - [Download and install the FTDI D2XX drivers](#Download-and-install-the-FTDI-D2XX-drivers)
 
 
-## Here are the steps to compile open and compile the project.
+## Here are the steps to compile the project and program the CPLD.
 
   ### Download/clone the SAMx4 project
   Get the project source files from [here.](https://www.6809.org.uk/dragon/samx4/)
