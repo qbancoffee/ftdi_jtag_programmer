@@ -1,7 +1,7 @@
 # FTDI JTAG Programmer
 An inexpensive JTAG programmer for Xilinx CPLD's using an FT232 usb to serial converter
 
-Disclaimer:<br>  [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
+Disclaimer:<br>
 This is not my own original project but rather an attempt to organize what I found on the internet that ultimately helped me program the CPLD in the SAMx4 project.
 
 
