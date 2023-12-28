@@ -1,0 +1,5 @@
+setMode -bsfile
+setCable -port svf -file samx4.svf
+addDevice -position 1 -file samx4.jed
+program -p 1 -e -v
+exit
