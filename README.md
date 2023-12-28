@@ -7,13 +7,13 @@ This project is not an original creation but rather an effort to organize inform
 ## Intro
 
 
-Introduction:
+Introduction:<br>
 I'm really into the Tandy Color Computer, especially the hardware side of things. Recently, I discovered that Ciaran Anscomb recreated the SAM chip, which is used in both the Dragon and Tandy Color Computers. Excited about this, I cloned his project and started adapting it for my own purposes.
 
-About Ciaran's Project - SAMx4:
+About Ciaran's Project - SAMx4:<br>
 Ciaran's project, called SAMx4, is centered around a Xilinx XC95144XL CPLD. The code was written in VHDL using the Xilinx ISE 14.7 development environment. In the Xilinx ISE, there's a module called Impact that's typically used to program the CPLD using a Xilinx-supported debugger or programmer. Unfortunately, I didn't have a Xilinx programmer, so I needed to find another way.
 
-Challenges and Alternative Approach:
+Challenges and Alternative Approach:<br>
 To overcome the lack of a Xilinx programmer, I decided to explore an alternative method. Instead of using a specialized Xilinx programmer, I set out to use an affordable FTDI-based USB-to-Serial converter as a JTAG programmer by bit banging the I/O pins. Specifically, I chose one based on the FT232RL chip. I happened to have a [Black FTDI Friend](https://learn.adafruit.com/ftdi-friend/overview) by Adafruit lying around, so I used that.
 
 This adaptation allowed me to program the Xilinx XC95144XL CPLD in the SAMx4 project without the need for an expensive Xilinx programmer. It's a cost-effective solution for folks like me who enjoy diving into the hardware side of things.
