@@ -3,8 +3,8 @@ An inexpensive JTAG programmer for Xilinx CPLD's using an FT232 usb to serial co
 
 Disclaimer:<br>
 This is not my own original project but rather an attempt to organize what I found on the internet that ultimately helped me program the CPLD in the SAMx4 project.
-I'll be using the SAMx4 project as an example on how to program the Xilinx XC95144XL CPLD however, I adapted this procedure from another
-project that uses a Xilinx XC9536XL CPLD so in theory these steps should work for other Xlinx CPLD's but I can't guarantee that.
+I'll be using the SAMx4 project as an example on how to program the Xilinx XC95144XL CPLD, I adapted this procedure from another
+project that uses a Xilinx XC9536XL CPLD so in theory these steps should work for other Xlinx CPLD's however, I can't guarantee that.
 
 ## Intro
 
