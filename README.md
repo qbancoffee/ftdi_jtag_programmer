@@ -37,6 +37,8 @@ Here are the steps to load it onto the CPLD.
   Get the project source files from [here.](https://www.6809.org.uk/dragon/samx4/)
   ### Download and install Xilinx ISE 14.7
   [Download Xilinx ISE 14.7 for your operating system](https://www.xilinx.com/downloadNav/vivado-design-tools/archive-ise.html)
+  If you are using Linux watch this video.
+  [How to install Xilinx ISE on Linux, in 7 easy steps!](https://youtu.be/yzEIQLQZYpk?si=v6nmZXc6_NBRsofR)
   ### Open the project with Xilinx ISE 14.7
   ### Implement the top module to produce a JED file
   ### Use Impact CLI to produce an SVF file from the JED file
@@ -73,7 +75,8 @@ You'll need to log out and then back in for this change to take effect however I
 ### Compile the CPLD programmer
 Someone wrote a small program that bitbangs the FT232RL chip to be used as a JTAG programmer and you can get it from [here](https://tulip-house.ddo.jp/digital/PROG_CPLD/index.html). I've included the program and the source from this site in this repository and you can find it in the "prog_cpld_original" directory.
 
-I've also modified and included a version of the source that now compiles on Linux. You can find the modified source and an x86 64 bit binary int the "prog_cpld_linux" directory.
+I slightly modified the source so that it now compiles under Linux. You can find the modified source and an x86 64 bit binary in the "prog_cpld_linux" directory.
+
 You can compile this program under Linux with gcc.
 ```bash
 gcc -o prog_cpld prog_cpld.c -lftd2x
@@ -84,7 +87,7 @@ gcc -o prog_cpld prog_cpld.c -lftd2x
 If you are using Windows you'll need to remove the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
 If you are using Linux then you'll need to temporarily unload the VCP(Virtual COM Port) module and install the D2XX direct USB access static and shared libraries.
 
-Plug in the FT232 based USB to serial converter. At this point, linux will load the built in VCP module and create a file named
+Plug in the FT232RL based USB to serial converter. At this point, linux will load the built-in VCP module and create a file named
 something like /dev/ttyUSB0 which means that the OS recognized it and loaded the FTDI virtual com port module. Since we want direct USB access to the FT232 chip, we'll need to temporarily remove this module.
 
 To see the loaded module type the following
@@ -101,6 +104,7 @@ Make sure the module is no longer loaded.
 ```bash
 lsmod | grep ftdi
 ```
+Keep in mind that you'll have to repeat these steps if you unplug and plug it back in.
 
 The original program "PROG_CPLD.exe" is Windows program and although I have not tested it, you should be able to just run it from a command prompt with the following command.
 ```dos
@@ -111,6 +115,15 @@ Similarly you can program the CPLD with the linux executable
 ./prog_cpld -v -c samx4.svf
 ```
 "samx4.svf" is the [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file produced for the CPLD in the SAMx4 PCB.
+
+You'll see lots of stuff scrolling and if successfuly yo'll see a maessage that reads.
+
+
+"<<< All TDO outputs matched to the expected values! >>>"
+
+INCLUDE IMAGE HERE
+
+
 
 ## Sources
 - [How to install Xilinx ISE on Linux, in 7 easy steps!](https://youtu.be/yzEIQLQZYpk?si=v6nmZXc6_NBRsofR)
