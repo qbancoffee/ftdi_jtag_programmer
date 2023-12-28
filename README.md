@@ -1,7 +1,7 @@
 # FTDI JTAG Programmer
 An inexpensive JTAG programmer for Xilinx CPLD's using an FT232 usb to serial converter
 
-Disclaimer:<br>
+Disclaimer:<br>  [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
 This is not my own original project but rather an attempt to organize what I found on the internet that ultimately helped me program the CPLD in the SAMx4 project.
 
 
@@ -75,7 +75,7 @@ You'll need to log out and then back in for this change to take effect however I
 
 
 ### Compile the CPLD programmer
-Someone wrote a small program that bitbangs the FT232RL chip to be used as a JTAG programmer and you can get it from [here](https://tulip-house.ddo.jp/digital/PROG_CPLD/index.html). I've included the program and the source from this site in this repository and you can find it in the "prog_cpld_original" directory.
+Someone wrote a small program that bitbangs the FT232RL chip to be used as a JTAG programmer, you can get it from [here](https://tulip-house.ddo.jp/digital/PROG_CPLD/index.html). For convinience, I've included the program and the source from this site in this repository and you can find it in the "prog_cpld_original" directory.
 
 I slightly modified the source so that it now compiles under Linux. You can find the modified source and an x86 64 bit binary in the "prog_cpld_linux" directory.
 
