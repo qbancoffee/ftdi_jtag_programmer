@@ -2,21 +2,21 @@
 An inexpensive JTAG programmer for Xilinx CPLD's using an FT232 usb to serial converter
 
 Disclaimer:<br>
-This is not my own original project but rather an attempt to organize what I found on the internet that ultimately helped me program the CPLD in the SAMx4 project.
-I'll be using the SAMx4 project as an example on how to program the Xilinx XC95144XL CPLD, I adapted this procedure from another
-project that uses a Xilinx XC9536XL CPLD so in theory these steps should work for other Xlinx CPLD's however, I can't guarantee that.
+This project is not an original creation but rather an effort to organize information gathered from the internet, which proved instrumental in programming the CPLD for the SAMx4 project. The programming procedure detailed here is based on adapting steps from a different project that used a Xilinx XC9536XL CPLD. While the steps are theoretically applicable to other Xilinx CPLDs, I cannot guarantee universal compatibility. The SAMx4 project serves as an example to demonstrate the programming process specifically for the Xilinx XC95144XL CPLD.
 
 ## Intro
 
 
-I'm a Tandy Color Computer enthusiast that especially enjoys the hardware side of things. 
-When I learned that Ciaran Ascomb had recreated the SAM chip, a chip used in the Dragon and Tandy Color Computer's,
-I immediately cloned his repository and began modifying his design for my use.
+Introduction:
+I'm really into the Tandy Color Computer, especially the hardware side of things. Recently, I discovered that Ciaran Anscomb recreated the SAM chip, which is used in both the Dragon and Tandy Color Computers. Excited about this, I cloned his project and started adapting it for my own purposes.
 
-Ciarans project is called the SAMx4 and it's built around a Xilinx XC95144XL CPLD. The code was written in VHDL using the older Xilinx ISE 14.7 development environment.
-Xilinx ISE has a module called Impact which is used to  program the CPLD using a Xilinx supported debugger(programmer). I don't own a Xilinx programmer so I decided to search for another approach.
-The idea is to take an inexpensive FTDI based USB to Serial converter and use it as a JTAG programmer by bit banging the I/O pins.
-There are many FTDI bases USB to serial converters but for this one you'll have to use one based on the FT232RL chip. I had a [Black FTDI Friend](https://learn.adafruit.com/ftdi-friend/overview) by Adafruit lying around so I used that.
+About Ciaran's Project - SAMx4:
+Ciaran's project, called SAMx4, is centered around a Xilinx XC95144XL CPLD. The code was written in VHDL using the Xilinx ISE 14.7 development environment. In the Xilinx ISE, there's a module called Impact that's typically used to program the CPLD using a Xilinx-supported debugger or programmer. Unfortunately, I didn't have a Xilinx programmer, so I needed to find another way.
+
+Challenges and Alternative Approach:
+To overcome the lack of a Xilinx programmer, I decided to explore an alternative method. Instead of using a specialized Xilinx programmer, I set out to use an affordable FTDI-based USB-to-Serial converter as a JTAG programmer by bit banging the I/O pins. Specifically, I chose one based on the FT232RL chip. I happened to have a [Black FTDI Friend](https://learn.adafruit.com/ftdi-friend/overview) by Adafruit lying around, so I used that.
+
+This adaptation allowed me to program the Xilinx XC95144XL CPLD in the SAMx4 project without the need for an expensive Xilinx programmer. It's a cost-effective solution for folks like me who enjoy diving into the hardware side of things.
 
 
 Here are the steps to compile the project and program the CPLD.
