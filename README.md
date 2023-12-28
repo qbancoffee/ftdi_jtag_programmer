@@ -26,15 +26,10 @@ Here are the steps to compile the project and program the CPLD.
 - [Open the project with Xilinx ISE 14.7](#Open-the-project-with-Xilinx-ISE-147)
 - [Implement the top module(compile) to produce a JED file](#Implement-the-top-module-to-produce-a-JED-file)
 - [Use Impact CLI to produce an SVF file from the JED file](#Use-Impact-CLI-to-produce-an-SVF-file-from-the-JED-file)
+- [Download and install the FTDI D2XX drivers](#Download-and-install-the-FTDI-D2XX-drivers)
 - [Compile the CPLD programmer](#Compile-the-CPLD-programmer)
 - [Programming the CPLD](#Programming-the-CPLD)
 
-
-Here are the steps to load it onto the CPLD.
-- [Download and install the FTDI D2XX drivers](#Download-and-install-the-FTDI-D2XX-drivers)
-
-
-## Here are the steps to compile the project and program the CPLD.
 
   ### Download/clone the SAMx4 project
   Get the project source files from [here.](https://www.6809.org.uk/dragon/samx4/)
@@ -50,8 +45,6 @@ Here are the steps to load it onto the CPLD.
   ### Open the project with Xilinx ISE 14.7
   ### Implement the top module to produce a JED file
   ### Use Impact CLI to produce an SVF file from the JED file
-  
-  ## Here are the steps to load it onto the CPLD.
   ### Download and install the FTDI D2XX drivers
     
 
