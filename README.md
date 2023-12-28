@@ -43,10 +43,7 @@ Here are the steps to load it onto the CPLD.
   
   ## Here are the steps to load it onto the CPLD.
   ### Download and install the FTDI D2XX drivers
-  
-  If you are using Windows you'll need to remove the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
-  If you are using Linux then you'll need to temporarily unload the VCP(Virtual COM Port) module and install the D2XX direct USB access static and shared libraries.
-  
+    
   [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
 
   Since I use Linux I'll go over what I did for my installation.
@@ -73,24 +70,6 @@ sudo usermod -aG plugdev $USER
 You'll need to log out and then back in for this change to take effect however I've noticed that this doesn't always work and a reboot is required.
 
 
-Plug in the FT232 based USB to serial converter. At this point, linux will load the built in VCP module and create a file named
-something like /dev/ttyUSB0 which means that the OS recognized it and loaded the FTDI virtual com port module. Since we want direct USB access to the FT232 chip, we'll need to temporarily remove this module.
-
-To see the loaded module type the following
-```bash
-lsmod | grep ftdi
-```
-
-To temporarily remove the module type th following.
-```bash
-sudo rmmod ftdi_sio
-```
-
-Make sure the is no longer loaded.
-```bash
-lsmod | grep ftdi
-```
-
 ### Compile the CPLD programmer
 Someone wrote a small program that bitbangs the FT232RL chip to be used as a JTAG programmer and you can get it from [here](https://tulip-house.ddo.jp/digital/PROG_CPLD/index.html). I've included the program and the source from this site in this repository and you can find it in the "prog_cpld_original" directory.
 
@@ -101,11 +80,37 @@ gcc -o prog_cpld prog_cpld.c -lftd2x
 ```
 
 ### Programming the CPLD
-The program is Windows program and although I have not tested it, you should be able to just run it from a command prompt with the following command.
+
+If you are using Windows you'll need to remove the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
+If you are using Linux then you'll need to temporarily unload the VCP(Virtual COM Port) module and install the D2XX direct USB access static and shared libraries.
+
+Plug in the FT232 based USB to serial converter. At this point, linux will load the built in VCP module and create a file named
+something like /dev/ttyUSB0 which means that the OS recognized it and loaded the FTDI virtual com port module. Since we want direct USB access to the FT232 chip, we'll need to temporarily remove this module.
+
+To see the loaded module type the following
+```bash
+lsmod | grep ftdi
+```
+
+To temporarily remove the module type the following.
+```bash
+sudo rmmod ftdi_sio
+```
+
+Make sure the module is no longer loaded.
+```bash
+lsmod | grep ftdi
+```
+
+The original program "PROG_CPLD.exe" is Windows program and although I have not tested it, you should be able to just run it from a command prompt with the following command.
 ```dos
 PROG_CPLD -v -c samx4.svf
 ```
-Where samx4.svf is the [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file produced for the CPLD in the SAMx4 PCB.
+Similarly you can program the CPLD with the linux executable
+```bash
+./prog_cpld -v -c samx4.svf
+```
+"samx4.svf" is the [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file produced for the CPLD in the SAMx4 PCB.
 
 ## Sources
 - [How to install Xilinx ISE on Linux, in 7 easy steps!](https://youtu.be/yzEIQLQZYpk?si=v6nmZXc6_NBRsofR)
