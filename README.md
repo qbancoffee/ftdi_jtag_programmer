@@ -81,7 +81,7 @@ I slightly modified the source so that it now compiles under Linux. You can find
 
 You can compile this program under Linux with gcc.
 ```bash
-gcc -o prog_cpld prog_cpld.c -lftd2x
+gcc -o prog_cpld prog_cpld.c -lftd2xx
 ```
 
 ### Programming the CPLD
