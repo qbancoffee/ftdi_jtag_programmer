@@ -91,6 +91,20 @@ You can compile this program under Linux with gcc.
 ```bash
 gcc -o prog_cpld prog_cpld.c -lftd2xx
 ```
+### Wiring the programmer to the SAMx4
+
+The FTDI friend convineiently provides +5V DC which we'll use to power the SAMx4 during programming.
+
+Generic Wiring Diagram<br>
+<img src="https://github.com/qbancoffee/ftdi_jtag_programmer/blob/main/images/wiring_1.jpg" width="300">
+
+
+The FTDI Friend SAMx4 wiring<br>
+<img src="https://github.com/qbancoffee/ftdi_jtag_programmer/blob/main/images/wiring_2.jpg" width="600">
+
+The FTDI Friend wired to the SAMx4<br>
+<img src="https://github.com/qbancoffee/ftdi_jtag_programmer/blob/main/images/samx4_to_ftdi_friend.jpg" width="600">
+
 
 ### Programming the CPLD
 
@@ -126,12 +140,12 @@ Similarly you can program the CPLD with the linux executable
 ```
 "samx4.svf" is the [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file produced for the CPLD in the SAMx4 PCB.
 
-You'll see lots of stuff scrolling and if successfuly yo'll see a maessage that reads.
+You'll see lots of stuff scrolling and if successfuly you'll see a maessage that reads.
 
 
 "<<< All TDO outputs matched to the expected values! >>>"
 
-INCLUDE IMAGE HERE
+<img src="https://github.com/qbancoffee/ftdi_jtag_programmer/blob/main/images/successful_programming.png" width="1200">
 
 
 
