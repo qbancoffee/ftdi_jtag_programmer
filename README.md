@@ -24,6 +24,7 @@ Here are the steps to compile open and compile the project.
 - [Implement the top module(compile) to produce a JED file](#Implement-the-top-module-to-produce-a-JED-file)
 - [Use Impact CLI to produce an SVF file from the JED file](#Use-Impact-CLI-to-produce-an-SVF-file-from-the-JED-file)
 - [Compile the CPLD programmer](#Compile-the-CPLD-programmer)
+- [Programming the CPLD](#Programming-the-CPLD)
 
 
 Here are the steps to load it onto the CPLD.
@@ -91,6 +92,20 @@ lsmod | grep ftdi
 ```
 
 ### Compile the CPLD programmer
+Someone wrote a small program that bitbangs the FT232RL chip to be used as a JTAG programmer and you can get it from [here](https://tulip-house.ddo.jp/digital/PROG_CPLD/index.html). I've included the program and the source from this site in this repository and you can find it in the "prog_cpld_original" directory.
+
+I've also modified and included a version of the source that now compiles on Linux. You can find the modified source and an x86 64 bit binary int the "prog_cpld_linux" directory.
+You can compile this program under Linux with gcc.
+```bash
+gcc -o prog_cpld prog_cpld.c -lftd2x
+```
+
+### Programming the CPLD
+The program is Windows program and although I have not tested it, you should be able to just run it from a command prompt with the following command.
+```dos
+PROG_CPLD -v -c samx4.svf
+```
+Where samx4.svf is the [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file produced for the CPLD in the SAMx4 PCB.
 
 ## Sources
 - [How to install Xilinx ISE on Linux, in 7 easy steps!](https://youtu.be/yzEIQLQZYpk?si=v6nmZXc6_NBRsofR)
