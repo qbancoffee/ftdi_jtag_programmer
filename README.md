@@ -46,11 +46,13 @@ Here are the steps to load it onto the CPLD.
   ## Here are the steps to load it onto the CPLD.
   ### Download and install the FTDI D2XX drivers
     
-  [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
 
   Since I use Linux I'll go over what I did for my installation.
   I used [this](https://ftdichip.com/Support/Documents/AppNotes/AN_220_FTDI_Drivers_Installation_Guide_for_Linux.pdf) guide to install the libraries and headers but I'll just paste the necessary commands below.
 At the time of this writing the D2XX library was version 1.4.27 so you'll have adjust accordingly if using a different version.
+
+  [Download the driver for your OS](https://ftdichip.com/drivers/d2xx-drivers/)
+
 Once downloaded, extract the files and navigate to the direcory where the files were extracted and enter the following commands using a terminal.
 ```bash
 sudo cp release/build/lib* /usr/local/lib
