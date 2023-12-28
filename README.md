@@ -83,7 +83,7 @@ You'll need to log out and then back in for this change to take effect however I
 
 
 ### Compile the CPLD programmer
-Someone wrote a small program that bitbangs the FT232RL chip to be used as a JTAG programmer, you can get it from [here](https://tulip-house.ddo.jp/digital/PROG_CPLD/index.html). For convinience, I've included the program and the source from this site in this repository and you can find it in the "prog_cpld_original" directory.
+Someone wrote a small program that bitbangs the FT232RL chip to be used as a JTAG programmer, you can get it from [here](https://tulip-house.ddo.jp/digital/PROG_CPLD/index.html). For convenience, I've included the program and the source from this site in this repository and you can find it in the "prog_cpld_original" directory.
 
 I slightly modified the source so that it now compiles under Linux. You can find the modified source and an x86 64 bit binary in the "prog_cpld_linux" directory.
 
@@ -93,7 +93,7 @@ gcc -o prog_cpld prog_cpld.c -lftd2xx
 ```
 ### Wiring the programmer to the SAMx4
 
-The FTDI friend convineiently provides +5V DC which we'll use to power the SAMx4 during programming.
+The FTDI friend conveniently provides +5V DC which we'll use to power the SAMx4 during programming.
 
 Generic Wiring Diagram<br>
 <img src="https://github.com/qbancoffee/ftdi_jtag_programmer/blob/main/images/wiring_1.jpg" width="300">
