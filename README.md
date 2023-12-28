@@ -23,7 +23,7 @@ Here are the steps to compile open and compile the project.
 - [Open the project with Xilinx ISE 14.7](#Open-the-project-with-Xilinx-ISE-147)
 - [Implement the top module(compile) to produce a JED file](#Implement-the-top-module-to-produce-a-JED-file)
 - [Use Impact CLI to produce an SVF file from the JED file](#Use-Impact-CLI-to-produce-an-SVF-file-from-the-JED-file)
-- [Compile the CPLD programmer](Compile-the-CPLD-programmer)
+- [Compile the CPLD programmer](#Compile-the-CPLD-programmer)
 
 
 Here are the steps to load it onto the CPLD.
