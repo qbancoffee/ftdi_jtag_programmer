@@ -107,6 +107,16 @@ The FTDI Friend wired to the SAMx4<br>
 
 
 ### Programming the CPLD
+You'll be loading an [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file to the CPLD and to help, I've included a working "samx4.svf" file just to confirm that you've successfully programmed the CPLD. The "samx4.svf" is the SVF file produced for the CPLD in the SAMx4 PCB.
+
+The "samx4.svf" file I've inlcluded is configured for the following:
+- 256K banker support
+- 4K and 16K DRAM support
+- SN74LS785 mode instead of SN74LS783 mode
+- Fast video
+- Dram refresh
+
+If you need a different configuration you'll have to change that in the source and recompile.
 
 If you are using Windows you'll need to remove the VCP(Virtual COM Port) drivers and install the D2XX direct USB access drivers.
 If you are using Linux then you'll need to temporarily unload the VCP(Virtual COM Port) module and install the D2XX direct USB access static and shared libraries.
@@ -130,7 +140,7 @@ lsmod | grep ftdi
 ```
 Keep in mind that you'll have to repeat these steps if you unplug and plug it back in.
 
-The original program "PROG_CPLD.exe" is Windows program and although I have not tested it, you should be able to just run it from a command prompt with the following command.
+The original program "PROG_CPLD.exe" is a Windows program and although I have not tested it, you should be able to just run it from a command prompt with the following command.
 ```dos
 PROG_CPLD -v -c samx4.svf
 ```
@@ -138,9 +148,9 @@ Similarly you can program the CPLD with the linux executable
 ```bash
 ./prog_cpld -v -c samx4.svf
 ```
-"samx4.svf" is the [SVF](https://en.wikipedia.org/wiki/Serial_Vector_Format) file produced for the CPLD in the SAMx4 PCB.
 
-You'll see lots of stuff scrolling and if successfuly you'll see a maessage that reads.
+
+You'll see lots of stuff scrolling and if successful, you'll see a maessage that reads.
 
 
 "<<< All TDO outputs matched to the expected values! >>>"
